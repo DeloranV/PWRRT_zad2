@@ -14,3 +14,6 @@ Do rozwiązania problemu wykorzystany został algorytm Grahama, służący do zn
 - Kontynuujemy ten proces aż do przejrzenia wszystkich punktów.
 ### 4. Zwrócenie otoczki wypukłej
 - Po przejściu wszystkich punktów, stos zawiera punkty tworzące naszą otoczkę wypukłą
+### 5. Ilustracje pomocnicze
+![Convex-Hull-using-Graham-Scan-1](https://github.com/user-attachments/assets/74429bef-cef0-4c4f-b488-ccc36f9a6dcc)
+![Convex-Hull-using-Graham-Scan-2](https://github.com/user-attachments/assets/93ac0112-99e4-4fa7-b8ff-11eacf531589)
