@@ -11,9 +11,23 @@ void swapPoints(Point *c1, Point *c2) {
     *c2 = temp;
 }
 
+// Szukanie pierwszego punktu
+void firstCoordinate(Point points[], int pointsElements) {
+    double minY = points[0].y;
+    int minIndex = 0;
+    for (int i = 1; i < pointsElements; i++) {
+        double y = points[i].y;
+        if ((y < minY) || (minY == y && points[i].x < points[minIndex].x)) {
+            minY = points[i].y;
+            minIndex = i;
+        }
+    }
+    swapPoints(&points[0], &points[minIndex]);
+}
+
 int main() {
     Point points[] = {{2, 3}, {1, 0}, {1, 2}, {5, 3},
-                           {2.5, 2}, {-1, 2}, {4, -1}, {3, 1}};
+                {2.5, 2}, {-1, 2}, {4, -1}, {3, 1}};
 
     int pointsElements = sizeof(points) / sizeof(Point);
 
@@ -23,7 +37,7 @@ int main() {
 
     std::cout << std::endl;
 
-    swapPoints(&points[0], &points[pointsElements - 1]);
+    firstCoordinate(points, pointsElements);
 
     for (Point p : points) {
         std::cout << p.x << ' ' << p.y << std::endl;
