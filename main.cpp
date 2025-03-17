@@ -96,9 +96,10 @@ void convexHull(Point coordinates[], int pointsElements) {
     }
 
     // Wyświelt punkty
+    std::cout << "Ponizej znajduja sie punkty, tworzace otoczke wypukla" << std::endl;
     while (!hull.empty()) {
         Point c = hull.top();
-        std::cout << c.x << " " << c.y << std::endl;
+        std::cout << "(" << c.x << ", " << c.y << "), ";
         hull.pop();
     }
 }
@@ -148,8 +149,6 @@ int readPoints(const std::string& filename, Point points[], int maxSize) {
 }
 
 int main() {
-    // Point points[] = {{2, 3}, {1, 0}, {1, 2}, {5, 3},
-    //             {2.5, 2}, {-1, 2}, {4, -1}, {3, 1}};
 
     int pointsElements;
     std::string fileName;
@@ -159,36 +158,11 @@ int main() {
 
     readFirstLine(fileName, pointsElements);
     Point pointsFile[pointsElements];
-    readPoints("input.txt", pointsFile, pointsElements);
-
-    std::cout << pointsElements << std::endl;
-
-    // for (Point p : pointsFile) {
-    //     std::cout << p.x << " " << p.y << std::endl;
-    // }
+    readPoints(fileName, pointsFile, pointsElements);
 
     firstCoordinate(pointsFile, pointsElements);
     qsort(&pointsFile[1], pointsElements - 1, sizeof(Point), compareCoordinates);
     convexHull(pointsFile, pointsElements);
-
-    // int pointsElements = sizeof(points) / sizeof(Point);
-    //
-    // for (Point p : points) {
-    //     std::cout << p.x << ' ' << p.y << std::endl;
-    // }
-    //
-    // std::cout << std::endl;
-    //
-    //
-    //
-    //
-    // for (Point p : points) {
-    //     std::cout << p.x << ' ' << p.y << std::endl;
-    // }
-    //
-    // std::cout << std::endl;
-    //
-    //
 
     return 0;
 }
