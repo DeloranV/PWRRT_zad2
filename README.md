@@ -9,7 +9,7 @@ Po załączeniu programu, wpisujemy nazwę pliku w którym znajduje się zbiór 
 ## Algorytm Grahama
 ### 1. Wybieramy punkt o najmniejszej współrzędnej y.
 - Jeśli jest kilka takich punktów, wybieramy ten o najmniejszej współrzędnej x
-### 2. Sortujemy wszystkie pozostałe punkty względem kąta nachylenia odcinka łączącego je z wybranym punktem. W przypadku równego kąta wybieramy punkt bliższy .
+### 2. Sortujemy wszystkie pozostałe punkty względem kąta nachylenia odcinka łączącego je z wybranym uprzednio punktem. W przypadku równego kąta wybieramy punkt bliższy punktowi wybranemu w poprzednim kroku.
 ### 3. Budowanie otoczki wypukłej
 - Przechodzimy przez posortowane punkty i dodajemy je do stosu (stos reprezentuje aktualnie budowaną otoczkę).
 - Jeśli dodanie nowego punktu powoduje obrót w lewo (zgodny z ruchem zegara), dodajemy punkt do otoczki.
