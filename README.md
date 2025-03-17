@@ -3,7 +3,7 @@
 Plik z przykładowym zbiorem punktów - "input.txt"
 Do rozwiązania problemu wykorzystany został algorytm Grahama, służący do znajdywania zbioru punktów tworzących otoczkę wypukłą
 <br>
-Po załączeniu programu, wpisujemy nazwę pliku w którym znajduje się zbiór punktów. Wciskamy enter, i wyświetli się znaleziony zbiór punktów.
+Po załączeniu programu, wpisujemy nazwę pliku w którym znajduje się zbiór punktów. Wciskamy enter, i wyświetli się znaleziony zbiór punktów. <br>
 ![image](https://github.com/user-attachments/assets/2332c5b2-2a81-4e24-b594-50b7d86e0ef5)
 
 ## Algorytm Grahama
